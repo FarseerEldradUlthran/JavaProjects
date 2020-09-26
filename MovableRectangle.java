@@ -55,7 +55,7 @@ class MovableRectangle1 implements Movable{
             x02 = x02 + x2;
             y02 = y02 + y2;
             System.out.println("Текущий результат:");
-            System.out.println("x1 = " + x01 + "y1 = " + y01 + "x2 = " + x02 + "y2 = " + y02);
+            System.out.println("x1 = " + x01 + " y1 = " + y01 + " x2 = " + x02 + " y2 = " + y02);
             System.out.println("Введите координаты х и у для точки левого верхнего угла прямоугольника: ");
             x1 = sc.nextDouble();
             y1 = sc.nextDouble();
@@ -64,7 +64,7 @@ class MovableRectangle1 implements Movable{
             y2 = sc.nextDouble();
         }
         System.out.println("Целостность была нарушена. Будут выведены последние верные результаты.");
-        System.out.println("x1 = " + x01 + "y1 = " + y01 + "x2 = " + x02 + "y2 = " + y02);
+        System.out.println("x1 = " + x01 + " y1 = " + y01 + " x2 = " + x02 + " y2 = " + y02);
     }
 
     @Override
