@@ -68,7 +68,6 @@ class Tictactoe extends JComponent {
             int y = mouseEvent.getY();
             int i = (int) ((float) x / getWidth() * 3);
             int j = (int) ((float) y / getHeight() * 3);
-            System.out.println(x + " " +  y + " " + i + " " + j);
             if (field[i][j] == FIELD_EMPTY) {
                 field[i][j] = isXturn ? FIELD_X : FIELD_0;
                 isXturn = !isXturn;
@@ -100,7 +99,6 @@ class Tictactoe extends JComponent {
                 y = (int) (Math.random() * getHeight() + 1);
                 i = (int) ((float) x / getWidth() * 3);
                 j = (int) ((float) y / getHeight() * 3);
-                System.out.println(x + " " + y + " " + i + " " + j);
                 if (field[i][j] == FIELD_EMPTY) {
                     break;
                 }
