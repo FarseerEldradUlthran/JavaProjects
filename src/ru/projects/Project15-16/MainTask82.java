@@ -24,16 +24,18 @@ public class MainTask82 {
                     if(addCase.charAt(i) == '@'){
                         count1++;
                     }
-                    else if(addCase.charAt(i) == '.'){
+                    else if(addCase.charAt(i) == '.' && i == addCase.length()-1){
                         count2++;
                     }
                 }
-                if(count1 == 1 && count2 == 1) {
+                if(count1 == 1 && count2 == 0) {
                     emailTree.add(addCase);
                     count1 = 0;
                     count2 = 0;
                 }
                 else{
+                    count1 = 0;
+                    count2 = 0;
                     System.out.println("Почта некорректна, повторите ввод.");
                 }
             }
