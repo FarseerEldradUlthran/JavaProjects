@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class MainTask81 {
     public static void main(String[] args) {
+
         int editInput, deleteInput;
         String input, addCase, editCase;
         boolean flag = true;
@@ -19,8 +20,19 @@ public class MainTask81 {
                 }
             }
             else if (input.equals("ADD")) {
-                addCase = scanner.nextLine();
-                toDoList.add(addCase);
+                String[] temp = scanner.nextLine().strip().split(" ", 2);
+                if (temp.length == 1){
+                    toDoList.add(temp[0]);
+                }
+                else if(temp.length > 1){
+                    int index = Integer.parseInt(temp[0]);
+                    if (!(index > toDoList.size())) {
+                        toDoList.add(index, temp[1]);
+                    }
+                    else{
+                        toDoList.add(temp[1]);
+                    }
+                }
             }
             else if (input.equals("EDIT")) {
                 editInput = scanner.nextInt();
