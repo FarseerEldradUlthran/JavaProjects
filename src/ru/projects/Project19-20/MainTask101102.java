@@ -4,9 +4,11 @@ import java.util.Scanner;
 public class MainTask101102 {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Input directory path:");
-        String path = scanner.nextLine();
         WorkingWithLog wWLog1 = new WorkingWithLog();
+        System.out.println("Input directory path:");
+        wWLog1.log("Input directory path:" + "\n");
+        String path = scanner.nextLine();
+        wWLog1.log("Path, that has been input " + path + "\n");
         File file = new File(path);
         double directorySize1, finalSize;
         String sizeTemp;
