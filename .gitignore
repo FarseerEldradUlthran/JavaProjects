@@ -15,6 +15,5 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 # IntellijIdea files
-*.iml
 .idea
 out
