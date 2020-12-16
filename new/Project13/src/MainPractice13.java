@@ -63,9 +63,9 @@ public class MainPractice13{
         {
             Files.createDirectories(Paths.get(dstFolder));
         }
-        int middle=files.length / coreNumber;
+        int middle = files.length / coreNumber;
         File[][] fail = new File[coreNumber][];
-        Thread[] potok=new Thread[coreNumber];
+        Thread[] stream = new Thread[coreNumber];
         for(int i = 0; i< coreNumber; i++)
         {
             if(i<(coreNumber -1))
@@ -76,8 +76,8 @@ public class MainPractice13{
                 fail[i]=new File[files.length-middle*i];
             }
             System.arraycopy(files, middle*i,fail[i],0, fail[i].length);
-            potok[i]=new ImageResize(fail[i],dstFolder,start);
-            potok[i].start();
+            stream[i]=new ImageResize(fail[i],dstFolder,start);
+            stream[i].start();
         }
     }
 }
