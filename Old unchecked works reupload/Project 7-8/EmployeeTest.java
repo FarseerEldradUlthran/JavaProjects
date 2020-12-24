@@ -122,7 +122,7 @@ class Company{
     }
 
     public void destroyFiftyPercent(){
-        int k = Company.quantitySum;
+        int k = Company.quantitySum - 1;
         for (int i=0; i<Company.quantitySum/2; i++) {
             employees.remove(k);
             k--;
@@ -179,7 +179,10 @@ public class EmployeeTest{
         company.hireAll("Manager", 80, employees);
         company.hireAll("Operator", 180, employees);
         company.output();
-        company.getBiggestSalary(30);
+        company.getBiggestSalary(15);
+        company.getLowestSalary(30);
+        company.destroyFiftyPercent();
+        company.getBiggestSalary(15);
         company.getLowestSalary(30);
     }
 }
